@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    height: 70%;
+    background: linear-gradient(145deg, #1c1c1c, #2c2c2c);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.left-section {
+    flex: 1;
+    background-color: #141414;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 40px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 70%;
+    max-height: 40%;
+    margin-bottom: 20px;
+}
+
+.left-section h1 {
+    margin: 10px 0;
+    font-size: 2.5em;
+    color: #e50914;
+}
+
+.left-section h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.login-form h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    text-align: center;
+    color: #e50914;
+}
+
+.login-form p {
+    margin-bottom: 20px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #cccccc;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2em;
+    color: #ffffff;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover,
+.login-button:focus {
+    background-color: #b20710;
+    outline: none;
+}
+
+.skip-link {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1em;
+    color: #0078d7;
+    text-decoration: none;
+}
+
+.skip-link:hover,
+.skip-link:focus {
+    text-decoration: underline;
+}
+
+.otp-info {
+    margin-top: 20px;
+    font-size: 0.9em;
+    text-align: center;
+    color: #cccccc;
+}

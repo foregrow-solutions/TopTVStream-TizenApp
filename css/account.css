@@ -1,0 +1,24 @@
+.account-page-section {
+    margin-top: 120px;
+    padding: 20px;
+}
+
+.account-info {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.account-info h3 {
+    margin: 0 0 10px 0;
+    color: #ff0000;
+    font-size: 24px;
+}
+
+.account-info p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #ccc;
+}

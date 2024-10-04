@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Live TV Khabriya</title>
+    <link rel="stylesheet" href="css/spinner.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="spinner-overlay" id="spinner">
+        <div class="spinner"></div>
+    </div>
+    <div class="container">
+        <div class="left-section">
+            <img src="images/khabriya_logo.png" alt="Logo" class="logo">
+            <h1>WATCH your favourite TV channels for free on TV or Mobile Phone</h1>
+            <h2>HIGH QUALITY | TV STREAMING</h2>
+        </div>
+        <div class="right-section">
+            <form class="login-form" id="login-form">
+                <h1>Get Started!</h1>
+                <div class="form-group">
+                    <label for="email">Enter your email to login/signup</label>
+                    <input type="email" id="email" name="email" required autofocus>
+                </div>
+                <button type="submit" class="login-button">Next</button>
+                <a href="index.html" class="skip-link">Skip Login</a>
+                <p class="otp-info">We will send you an OTP to login or sign up for your account on your email.</p>
+            </form>
+        </div>
+    </div>
+    <script src="js/remoteControlManager.js" type="module"></script>
+    <script src="js/login.js" type="module"></script>
+</body>
+
+</html>

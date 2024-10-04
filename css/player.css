@@ -1,0 +1,42 @@
+/* General styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    /* Hide overflow to prevent scrolling */
+}
+
+.player-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    /* Full height of the viewport */
+    padding: 0;
+    margin: 0;
+}
+
+.player {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure the video covers the entire area */
+    border: none;
+    border-radius: 0;
+    outline: none;
+}

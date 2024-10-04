@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Netflix-style Tizen TV App - Player Page">
+    <title>Player - Live TV Khabriya</title>
+    <link rel="stylesheet" href="css/player.css">
+    <script src="js/main.js" type="module" defer></script>
+    <script src="js/remoteControlManager.js" type="module"></script>
+    <!-- Include hls.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+
+<body>
+    <section class="player-section">
+        <div class="player">
+            <video id="video" controls autoplay></video>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const videoSrc = urlParams.get('videoUrl');
+            if (!videoSrc) {
+                console.error('No video URL provided');
+                return;
+            }
+            const video = document.getElementById('video');
+
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(videoSrc);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                    video.play();
+                });
+                hls.on(Hls.Events.ERROR, (event, data) => {
+                    console.error('HLS.js error:', data);
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegURL')) {
+                video.src = videoSrc;
+                video.addEventListener('loadedmetadata', () => {
+                    video.play();
+                });
+            } else {
+                console.error('This browser does not support HLS.');
+            }
+
+            video.addEventListener('error', (event) => {
+                console.error('Video playback error:', event);
+            });
+        });
+    </script>
+</body>
+
+</html>

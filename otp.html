@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP - Live TV Khabriya</title>
+    <link rel="stylesheet" href="css/spinner.css">
+    <link rel="stylesheet" href="css/otp.css">
+</head>
+
+<body>
+    <div class="spinner-overlay" id="spinner">
+        <div class="spinner"></div>
+    </div>
+    <div class="container">
+        <div class="left-section">
+            <img src="images/khabriya_logo.png" alt="Logo" class="logo">
+            <h1>WATCH your favourite TV channels for free on TV or Mobile Phone</h1>
+            <h2>HIGH QUALITY | TV STREAMING</h2>
+        </div>
+        <div class="right-section">
+            <div class="otp-section">
+                <h1>Enter OTP</h1>
+                <p>We have sent an OTP to your email. Please enter it below to verify your account.</p>
+                <form class="otp-form" id="otp-form">
+                    <div class="otp-input">
+                        <input type="text" id="digit-1" name="digit-1" maxlength="1" required autofocus>
+                        <input type="text" id="digit-2" name="digit-2" maxlength="1" required>
+                        <input type="text" id="digit-3" name="digit-3" maxlength="1" required>
+                        <input type="text" id="digit-4" name="digit-4" maxlength="1" required>
+                        <input type="text" id="digit-5" name="digit-5" maxlength="1" required>
+                        <input type="text" id="digit-6" name="digit-6" maxlength="1" required>
+                    </div>
+                    <button type="submit" class="verify-button">Verify</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/remoteControlManager.js" type="module"></script>
+    <script src="js/otp.js" type="module"></script>
+</body>
+
+</html>
